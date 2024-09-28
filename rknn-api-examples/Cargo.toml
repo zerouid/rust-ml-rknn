@@ -1,0 +1,22 @@
+[package]
+name = "rknn-api-examples"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rknn-api-sys = { workspace = true }
+candle = { workspace = true }
+clap = { workspace = true }
+anyhow = { workspace = true }
+image = { workspace = true }
+
+[build-dependencies]
+reqwest = { workspace = true }
+anyhow = { workspace = true }
+
+[features]
+default = ["rk3588"]
+rk3588 = []
+rk3562 = []
+rk3566_rk3568 = []
+rk3576 = []

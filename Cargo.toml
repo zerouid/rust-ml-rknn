@@ -1,0 +1,25 @@
+[workspace]
+members = ["rknn-api-sys", "rknn-api-examples"]
+resolver = "2"
+
+[workspace.package]
+version = "0.0.1"
+edition = "2021"
+# description = "Minimalist ML framework."
+# repository = "https://github.com/huggingface/candle"
+# keywords = ["blas", "tensor", "machine-learning"]
+# categories = ["science"]
+# license = "MIT OR Apache-2.0"
+
+[workspace.dependencies]
+rknn-api-sys = { version = "0.1.0", path = "./rknn-api-sys" }
+bindgen = "0.70.1"
+candle = { package = "candle-core", git = "https://github.com/huggingface/candle.git" }
+clap = { version = "4.5.18", features = ["derive"] }
+anyhow = "1.0.89"
+reqwest = { version = "0.12.7", features = ["blocking"] }
+runtime-fmt = "0.4.1"
+image = { version = "0.25.2", default-features = false, features = [
+    "jpeg",
+    "png",
+] }

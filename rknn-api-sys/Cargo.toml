@@ -1,0 +1,11 @@
+[package]
+name = "rknn-api-sys"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+
+[build-dependencies]
+bindgen = "0.70.1"
+anyhow = { workspace = true }
+reqwest = { workspace = true }
